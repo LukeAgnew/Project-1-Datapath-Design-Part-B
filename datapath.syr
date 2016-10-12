@@ -1,0 +1,636 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "datapath.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "datapath"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/full_adder.vhd" in Library work.
+Entity <full_adder> compiled.
+Entity <full_adder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/logic_unit_mux4_16bit.vhd" in Library work.
+Entity <logic_unit_mux4_16bit> compiled.
+Entity <logic_unit_mux4_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/b_input_logic.vhd" in Library work.
+Entity <b_input_logic> compiled.
+Entity <b_input_logic> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/ripple_carry_adder_16bit.vhd" in Library work.
+Entity <ripple_carry_adder_16bit> compiled.
+Entity <ripple_carry_adder_16bit> (Architecture <structural_16>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/arithmetic_unit_16bit.vhd" in Library work.
+Entity <arithmetic_unit_16bit> compiled.
+Entity <arithmetic_unit_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/logic_unit_16bit.vhd" in Library work.
+Entity <logic_unit_16bit> compiled.
+Entity <logic_unit_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/mux2_16bit.vhd" in Library work.
+Entity <mux2_16bit> compiled.
+Entity <mux2_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/arithmetic_logic_unit_16bit.vhd" in Library work.
+Entity <arithmetic_logic_unit_16bit> compiled.
+Entity <arithmetic_logic_unit_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/shifter_16bit.vhd" in Library work.
+Entity <shifter_16bit> compiled.
+Entity <shifter_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/reg16.vhd" in Library work.
+Entity <reg16> compiled.
+Entity <reg16> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/decoder_3_to_8.vhd" in Library work.
+Entity <decoder_3_to_8> compiled.
+Entity <decoder_3_to_8> (Architecture <dataflow_1>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/mux8_16bit.vhd" in Library work.
+Entity <mux8_16bit> compiled.
+Entity <mux8_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/register_file.vhd" in Library work.
+Entity <register_file> compiled.
+Entity <register_file> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/mux_b_data_bus_16bit.vhd" in Library work.
+Entity <mux_b_data_bus_16bit> compiled.
+Entity <mux_b_data_bus_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/functional_unit.vhd" in Library work.
+Entity <functional_unit> compiled.
+Entity <functional_unit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/mux_d_data_bus_16bit.vhd" in Library work.
+Entity <mux_d_data_bus_16bit> compiled.
+Entity <mux_d_data_bus_16bit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/datapath.vhd" in Library work.
+Entity <datapath> compiled.
+Entity <datapath> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <datapath> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <register_file> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mux_b_data_bus_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <functional_unit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mux_d_data_bus_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <reg16> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <decoder_3_to_8> in library <work> (architecture <dataflow_1>).
+
+Analyzing hierarchy for entity <mux8_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <arithmetic_logic_unit_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <shifter_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mux2_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <arithmetic_unit_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <logic_unit_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <b_input_logic> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ripple_carry_adder_16bit> in library <work> (architecture <structural_16>).
+
+Analyzing hierarchy for entity <logic_unit_mux4_16bit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <full_adder> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <datapath> in library <work> (Architecture <Behavioral>).
+Entity <datapath> analyzed. Unit <datapath> generated.
+
+Analyzing Entity <register_file> in library <work> (Architecture <Behavioral>).
+Entity <register_file> analyzed. Unit <register_file> generated.
+
+Analyzing Entity <reg16> in library <work> (Architecture <Behavioral>).
+Entity <reg16> analyzed. Unit <reg16> generated.
+
+Analyzing Entity <decoder_3_to_8> in library <work> (Architecture <dataflow_1>).
+Entity <decoder_3_to_8> analyzed. Unit <decoder_3_to_8> generated.
+
+Analyzing Entity <mux8_16bit> in library <work> (Architecture <Behavioral>).
+Entity <mux8_16bit> analyzed. Unit <mux8_16bit> generated.
+
+Analyzing Entity <mux_b_data_bus_16bit> in library <work> (Architecture <Behavioral>).
+Entity <mux_b_data_bus_16bit> analyzed. Unit <mux_b_data_bus_16bit> generated.
+
+Analyzing Entity <functional_unit> in library <work> (Architecture <Behavioral>).
+Entity <functional_unit> analyzed. Unit <functional_unit> generated.
+
+Analyzing Entity <arithmetic_logic_unit_16bit> in library <work> (Architecture <Behavioral>).
+Entity <arithmetic_logic_unit_16bit> analyzed. Unit <arithmetic_logic_unit_16bit> generated.
+
+Analyzing Entity <arithmetic_unit_16bit> in library <work> (Architecture <Behavioral>).
+Entity <arithmetic_unit_16bit> analyzed. Unit <arithmetic_unit_16bit> generated.
+
+Analyzing Entity <b_input_logic> in library <work> (Architecture <Behavioral>).
+Entity <b_input_logic> analyzed. Unit <b_input_logic> generated.
+
+Analyzing Entity <ripple_carry_adder_16bit> in library <work> (Architecture <structural_16>).
+Entity <ripple_carry_adder_16bit> analyzed. Unit <ripple_carry_adder_16bit> generated.
+
+Analyzing Entity <full_adder> in library <work> (Architecture <Behavioral>).
+Entity <full_adder> analyzed. Unit <full_adder> generated.
+
+Analyzing Entity <logic_unit_16bit> in library <work> (Architecture <Behavioral>).
+Entity <logic_unit_16bit> analyzed. Unit <logic_unit_16bit> generated.
+
+Analyzing Entity <logic_unit_mux4_16bit> in library <work> (Architecture <Behavioral>).
+Entity <logic_unit_mux4_16bit> analyzed. Unit <logic_unit_mux4_16bit> generated.
+
+Analyzing Entity <shifter_16bit> in library <work> (Architecture <Behavioral>).
+Entity <shifter_16bit> analyzed. Unit <shifter_16bit> generated.
+
+Analyzing Entity <mux2_16bit> in library <work> (Architecture <Behavioral>).
+Entity <mux2_16bit> analyzed. Unit <mux2_16bit> generated.
+
+Analyzing Entity <mux_d_data_bus_16bit> in library <work> (Architecture <Behavioral>).
+Entity <mux_d_data_bus_16bit> analyzed. Unit <mux_d_data_bus_16bit> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mux_b_data_bus_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/mux_b_data_bus_16bit.vhd".
+Unit <mux_b_data_bus_16bit> synthesized.
+
+
+Synthesizing Unit <mux_d_data_bus_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/mux_d_data_bus_16bit.vhd".
+Unit <mux_d_data_bus_16bit> synthesized.
+
+
+Synthesizing Unit <reg16>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/reg16.vhd".
+    Found 16-bit register for signal <Q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <reg16> synthesized.
+
+
+Synthesizing Unit <decoder_3_to_8>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/decoder_3_to_8.vhd".
+Unit <decoder_3_to_8> synthesized.
+
+
+Synthesizing Unit <mux8_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/mux8_16bit.vhd".
+Unit <mux8_16bit> synthesized.
+
+
+Synthesizing Unit <shifter_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/shifter_16bit.vhd".
+    Found 16-bit shifter rotate right for signal <Hs>.
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <shifter_16bit> synthesized.
+
+
+Synthesizing Unit <mux2_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/mux2_16bit.vhd".
+Unit <mux2_16bit> synthesized.
+
+
+Synthesizing Unit <b_input_logic>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/b_input_logic.vhd".
+Unit <b_input_logic> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/full_adder.vhd".
+    Found 1-bit xor3 for signal <S>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <logic_unit_mux4_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/logic_unit_mux4_16bit.vhd".
+Unit <logic_unit_mux4_16bit> synthesized.
+
+
+Synthesizing Unit <register_file>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-A-2/register_file.vhd".
+Unit <register_file> synthesized.
+
+
+Synthesizing Unit <logic_unit_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/logic_unit_16bit.vhd".
+    Found 16-bit xor2 for signal <AxorB>.
+Unit <logic_unit_16bit> synthesized.
+
+
+Synthesizing Unit <ripple_carry_adder_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/ripple_carry_adder_16bit.vhd".
+Unit <ripple_carry_adder_16bit> synthesized.
+
+
+Synthesizing Unit <arithmetic_unit_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/arithmetic_unit_16bit.vhd".
+Unit <arithmetic_unit_16bit> synthesized.
+
+
+Synthesizing Unit <arithmetic_logic_unit_16bit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/arithmetic_logic_unit_16bit.vhd".
+Unit <arithmetic_logic_unit_16bit> synthesized.
+
+
+Synthesizing Unit <functional_unit>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/functional_unit.vhd".
+Unit <functional_unit> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "//tholos.itserv.scss.tcd.ie/ugrad/agnewl/Project-1-Datapath-Design-Part-B/datapath.vhd".
+WARNING:Xst:647 - Input <data_src> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <datapath> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 8
+ 16-bit register                                       : 8
+# Logic shifters                                       : 1
+ 16-bit shifter rotate right                           : 1
+# Xors                                                 : 17
+ 1-bit xor3                                            : 16
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Logic shifters                                       : 1
+ 16-bit shifter rotate right                           : 1
+# Xors                                                 : 17
+ 1-bit xor3                                            : 16
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <ripple_carry_adder_16bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block datapath, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : datapath.ngr
+Top Level Output File Name         : datapath
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 87
+
+Cell Usage :
+# BELS                             : 498
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 11
+#      LUT3                        : 105
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 235
+#      LUT4_D                      : 17
+#      LUT4_L                      : 22
+#      MUXF5                       : 103
+# FlipFlops/Latches                : 128
+#      FDE                         : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 85
+#      IBUF                        : 52
+#      OBUF                        : 33
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                      231  out of   5888     3%  
+ Number of Slice Flip Flops:            128  out of  11776     1%  
+ Number of 4 input LUTs:                394  out of  11776     3%  
+ Number of IOs:                          87
+ Number of bonded IOBs:                  86  out of    372    23%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 128   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.972ns (Maximum Frequency: 100.281MHz)
+   Minimum input arrival time before clock: 11.123ns
+   Maximum output required time after clock: 13.754ns
+   Maximum combinational path delay: 14.945ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 9.972ns (frequency: 100.281MHz)
+  Total number of paths / destination ports: 41664 / 128
+-------------------------------------------------------------------------
+Delay:               9.972ns (Levels of Logic = 10)
+  Source:            datapath_register_file/reg00/Q_14 (FF)
+  Destination:       datapath_register_file/reg00/Q_15 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: datapath_register_file/reg00/Q_14 to datapath_register_file/reg00/Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.527  datapath_register_file/reg00/Q_14 (datapath_register_file/reg00/Q_14)
+     LUT3:I1->O            1   0.643   0.000  datapath_mux_b/b_z<14>85_F (N239)
+     MUXF5:I0->O           1   0.276   0.423  datapath_mux_b/b_z<14>85 (datapath_mux_b/b_z<14>85)
+     LUT4:I3->O            2   0.648   0.479  datapath_mux_b/b_z<14>113 (datapath_mux_b/b_z<14>113)
+     LUT3:I2->O            6   0.648   0.701  datapath_mux_b/b_z<14>141 (data_out_14_OBUF)
+     LUT3:I2->O            1   0.648   0.000  Sh1131_G (N258)
+     MUXF5:I1->O           4   0.276   0.590  Sh1131 (Sh11)
+     LUT4:I3->O            1   0.648   0.000  datapath_mux_d/d_z<15>45_G (N254)
+     MUXF5:I1->O           2   0.276   0.447  datapath_mux_d/d_z<15>45 (datapath_mux_d/d_z<15>45)
+     MUXF5:S->O            1   0.756   0.500  datapath_mux_d/d_z<15>206_SW0_SW1 (N176)
+     LUT3:I1->O            8   0.643   0.000  datapath_mux_d/d_z<15>206 (intermediate_Bus_D_data<15>)
+     FDE:D                     0.252          datapath_register_file/reg07/Q_15
+    ----------------------------------------
+    Total                      9.972ns (6.305ns logic, 3.667ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 64376 / 256
+-------------------------------------------------------------------------
+Offset:              11.123ns (Levels of Logic = 11)
+  Source:            src_s2_B (PAD)
+  Destination:       datapath_register_file/reg00/Q_15 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: src_s2_B to datapath_register_file/reg00/Q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.849   1.415  src_s2_B_IBUF (src_s2_B_IBUF)
+     LUT3:I0->O            1   0.648   0.000  datapath_mux_b/b_z<14>85_F (N239)
+     MUXF5:I0->O           1   0.276   0.423  datapath_mux_b/b_z<14>85 (datapath_mux_b/b_z<14>85)
+     LUT4:I3->O            2   0.648   0.479  datapath_mux_b/b_z<14>113 (datapath_mux_b/b_z<14>113)
+     LUT3:I2->O            6   0.648   0.701  datapath_mux_b/b_z<14>141 (data_out_14_OBUF)
+     LUT3:I2->O            1   0.648   0.000  Sh1131_G (N258)
+     MUXF5:I1->O           4   0.276   0.590  Sh1131 (Sh11)
+     LUT4:I3->O            1   0.648   0.000  datapath_mux_d/d_z<15>45_G (N254)
+     MUXF5:I1->O           2   0.276   0.447  datapath_mux_d/d_z<15>45 (datapath_mux_d/d_z<15>45)
+     MUXF5:S->O            1   0.756   0.500  datapath_mux_d/d_z<15>206_SW0_SW1 (N176)
+     LUT3:I1->O            8   0.643   0.000  datapath_mux_d/d_z<15>206 (intermediate_Bus_D_data<15>)
+     FDE:D                     0.252          datapath_register_file/reg07/Q_15
+    ----------------------------------------
+    Total                     11.123ns (6.568ns logic, 4.555ns route)
+                                       (59.0% logic, 41.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 512 / 33
+-------------------------------------------------------------------------
+Offset:              13.754ns (Levels of Logic = 9)
+  Source:            datapath_register_file/reg04/Q_0 (FF)
+  Destination:       C (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: datapath_register_file/reg04/Q_0 to C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   0.479  datapath_register_file/reg04/Q_0 (datapath_register_file/reg04/Q_0)
+     LUT4:I2->O            1   0.648   0.000  datapath_mux_b/b_z<0>45_F (N203)
+     MUXF5:I0->O           2   0.276   0.479  datapath_mux_b/b_z<0>45 (datapath_mux_b/b_z<0>45)
+     LUT4:I2->O            6   0.648   0.672  datapath_mux_b/b_z<0>142 (data_out_0_OBUF)
+     LUT4:I3->O            4   0.648   0.590  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit0/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<1>)
+     LUT4_D:I3->LO         1   0.648   0.103  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit3/Mxor_S_xo<0>1 (N445)
+     LUT4:I3->O            5   0.648   0.636  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit7/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<8>)
+     LUT4_D:I3->O          1   0.648   0.452  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit14/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<15>)
+     LUT3:I2->O            1   0.648   0.420  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit15/Mxor_S_xo<0>1 (C_OBUF)
+     OBUF:I->O                 4.520          C_OBUF (C)
+    ----------------------------------------
+    Total                     13.754ns (9.923ns logic, 3.831ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 685 / 33
+-------------------------------------------------------------------------
+Delay:               14.945ns (Levels of Logic = 10)
+  Source:            src_s0_B (PAD)
+  Destination:       C (PAD)
+
+  Data Path: src_s0_B to C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            55   0.849   1.412  src_s0_B_IBUF (src_s0_B_IBUF)
+     LUT4:I0->O            1   0.648   0.000  datapath_mux_b/b_z<0>45_F (N203)
+     MUXF5:I0->O           2   0.276   0.479  datapath_mux_b/b_z<0>45 (datapath_mux_b/b_z<0>45)
+     LUT4:I2->O            6   0.648   0.672  datapath_mux_b/b_z<0>142 (data_out_0_OBUF)
+     LUT4:I3->O            4   0.648   0.590  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit0/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<1>)
+     LUT4_D:I3->LO         1   0.648   0.103  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit3/Mxor_S_xo<0>1 (N445)
+     LUT4:I3->O            5   0.648   0.636  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit7/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<8>)
+     LUT4_D:I3->O          1   0.648   0.452  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit14/Mxor_S_xo<0>1 (datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/C<15>)
+     LUT3:I2->O            1   0.648   0.420  datapath_functional_unit/ALU/Arithmetic_Circuit/Ripple_Carry_Adder/Bit15/Mxor_S_xo<0>1 (C_OBUF)
+     OBUF:I->O                 4.520          C_OBUF (C)
+    ----------------------------------------
+    Total                     14.945ns (10.181ns logic, 4.764ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.49 secs
+ 
+--> 
+
+Total memory usage is 258388 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,5 @@
+set -tmpdir "U:/Project-1-Datapath-Design-Part-B/xst/projnav.tmp"
+set -xsthdpdir "U:/Project-1-Datapath-Design-Part-B/xst"
+elaborate
+-ifn shifter_16bit.prj
+-ifmt mixed

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "U:/Project-1-Datapath-Design-Part-B/datapath.xst" -ofn "U:/Project-1-Datapath-Design-Part-B/datapath.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700a-fg484-4 datapath.ngc datapath.ngd  

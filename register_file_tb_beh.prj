@@ -1,0 +1,6 @@
+vhdl work "../Project-1-Datapath-Design-Part-A-2/reg16.vhd"
+vhdl work "../Project-1-Datapath-Design-Part-A-2/mux8_16bit.vhd"
+vhdl work "../Project-1-Datapath-Design-Part-A-2/mux2_16bit.vhd"
+vhdl work "../Project-1-Datapath-Design-Part-A-2/decoder_3_to_8.vhd"
+vhdl work "../Project-1-Datapath-Design-Part-A-2/register_file.vhd"
+vhdl work "../Project-1-Datapath-Design-Part-A-2/register_file_tb.vhd"
